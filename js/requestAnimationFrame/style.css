@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4385f3;
+    font-family: 'arial', sans-serif;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0px;
+    color: #333;
+}
+
+h2 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    margin: 0px 0px 4px 0px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+small {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+}
+
+main {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+section{
+    color: #fff;
+}
+
+section > header,
+section > footer {
+    padding: 16px;
+}
+
+section > header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+section > footer > a {
+    padding: 16px;
+    text-align: center;
+    color: #4385f3;
+    display: block;
+    text-decoration: none;
+    border: 1px solid #4385f3;
+}
+
+#cart {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 600px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #a5a5a5;
+    box-shadow: 0px 4px 10px rgba(0,0,0,.15);
+    position: relative;
+}
+
+#cart > span {
+    color: #a5a5a5;
+    font-weight: 300;
+    text-align: left;
+}
+
+#cart > article > ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    overflow-y: auto;
+    height: 514px;
+}
+
+#cart > article > ul > li {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    width: 100%;
+    margin: 0px;
+}
+
+#cart > article > ul > li:hover {
+    background-color: #f5f5f5;
+}
+
+#cart > article > ul > li > .infos {
+    flex: 1;
+    padding: 8px 12px;
+}
+
+#cart > article > ul > li > .infos > .title {
+    font-weight: 100;
+}
+
+#cart > article > ul > li > .infos > .brand {
+    margin: 0px 0px 12px 0px;
+}
+
+#cart > article > ul > li > .infos > .price {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+
+#cart > article > ul > li > .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart > article > ul > li > .actions > a {
+    color: #4385f3;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#cart > article > ul > li > .actions > a:hover {
+    text-decoration: underline;
+}
+
+/* Behavior */
+.cart__item.remove {
+  position: absolute;
+}
+
+/* Animations */
+.cart.animate > .cart__item {
+  transition: 500ms ease-out;
+}
+
+.cart.animate > .cart__item.remove {
+  opacity: 0;
+}
+
+/* Optimization */
+.cart > .cart__item {
+  will-change: transform;
+}
+
+.cart__item.remove {
+  will-change: transform, opacity;
+}
