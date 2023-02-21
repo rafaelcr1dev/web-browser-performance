@@ -1,5 +1,3 @@
-
-
 ;(function() {
     var start = +new Date();
 
@@ -18,6 +16,12 @@
         document.getElementById('time').innerHTML = `The generation time of these prime numbers was <strong>${time} ms</strong>.`
     });
 
-    // Manda uma mensagem pro web worker
-    worker.postMessage({ limit: 200000 }); // assíncrono - retorna imediatamente
+    // main.js
+    worker.postMessage({ limit: 200000 });
+
+    // worker.js
+    addEventListener('message', function(e) {
+      const { data } = e
+      postMessage({ result: getPrimes(data.limit) });
+    });
 })();

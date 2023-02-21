@@ -8,11 +8,11 @@ body {
     height: 100vh;
 }
 
-.image {
+.imageCPU {
   left: 0;
   width: 200px;
   position: absolute;
-  animation: anima 1s ease alternate infinite;
+  animation: animaCPU 1s ease alternate infinite;
   filter: grayscale();
 }
 
@@ -24,7 +24,7 @@ body {
   animation: animaGPU 1s ease alternate infinite;
 }
 
-@keyframes anima {
+@keyframes animaCPU {
   to {
       left: 750px;
       width: 260px;

@@ -12,7 +12,7 @@
             }
           }
       
-          if (isPrime) {
+          if (isPrime) { 
             primes.push(i);
           }
         }
