@@ -16,12 +16,6 @@
         document.getElementById('time').innerHTML = `The generation time of these prime numbers was <strong>${time} ms</strong>.`
     });
 
-    // main.js
+    // Envia a msg para o Web Worker
     worker.postMessage({ limit: 200000 });
-
-    // worker.js
-    addEventListener('message', function(e) {
-      const { data } = e
-      postMessage({ result: getPrimes(data.limit) });
-    });
 })();
